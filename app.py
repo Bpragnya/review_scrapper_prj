@@ -12,7 +12,7 @@ def homePage():
     return render_template("index.html")
 
 @app.route('/review',methods=['POST','GET']) # route to show the review comments in a web UI
-@cross_origin()
+@cross_origin()#cloud deployment requires to connect from one origin to another origin(virginia/mumbai/singapore) to establish communication outside india from anywhere
 def index():
     if request.method == 'POST':
         try:
